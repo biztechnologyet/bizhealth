@@ -8,22 +8,22 @@ import frappe
 from frappe.tests.utils import FrappeTestCase
 from frappe.utils import getdate, now_datetime
 
-from healthcare.healthcare.doctype.inpatient_medication_order.test_inpatient_medication_order import (
+from healthcare.doctype.inpatient_medication_order.test_inpatient_medication_order import (
 	create_ipme,
 	create_ipmo,
 )
-from healthcare.healthcare.doctype.inpatient_record.inpatient_record import (
+from healthcare.doctype.inpatient_record.inpatient_record import (
 	admit_patient,
 	discharge_patient,
 	schedule_discharge,
 )
-from healthcare.healthcare.doctype.inpatient_record.test_inpatient_record import (
+from healthcare.doctype.inpatient_record.test_inpatient_record import (
 	create_inpatient,
 	create_patient,
 	get_healthcare_service_unit,
 	mark_invoiced_inpatient_occupancy,
 )
-from healthcare.healthcare.report.inpatient_medication_orders.inpatient_medication_orders import (
+from healthcare.report.inpatient_medication_orders.inpatient_medication_orders import (
 	execute,
 )
 

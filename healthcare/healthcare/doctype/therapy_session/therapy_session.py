@@ -11,15 +11,15 @@ from frappe.model.document import Document
 from frappe.model.mapper import get_mapped_doc
 from frappe.utils import flt, get_link_to_form, get_time, getdate
 
-from healthcare.healthcare.doctype.healthcare_settings.healthcare_settings import (
+from healthcare.doctype.healthcare_settings.healthcare_settings import (
 	get_income_account,
 	get_receivable_account,
 )
-from healthcare.healthcare.doctype.nursing_task.nursing_task import NursingTask
-from healthcare.healthcare.doctype.service_request.service_request import (
+from healthcare.doctype.nursing_task.nursing_task import NursingTask
+from healthcare.doctype.service_request.service_request import (
 	update_service_request_status,
 )
-from healthcare.healthcare.utils import validate_nursing_tasks
+from healthcare.utils import validate_nursing_tasks
 
 
 class TherapySession(Document):

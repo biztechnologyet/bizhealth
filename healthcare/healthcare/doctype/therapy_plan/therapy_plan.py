@@ -7,7 +7,7 @@ import frappe
 from frappe.model.document import Document
 from frappe.utils import flt, today
 
-from healthcare.healthcare.utils import validate_nursing_tasks
+from healthcare.utils import validate_nursing_tasks
 
 
 class TherapyPlan(Document):

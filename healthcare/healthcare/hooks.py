@@ -60,29 +60,29 @@ doctype_js = {"Sales Invoice": "public/js/sales_invoice.js"}
 # add methods and filters to jinja environment
 jinja = {
 	"methods": [
-		"healthcare.healthcare.doctype.diagnostic_report.diagnostic_report.diagnostic_report_print",
-		"healthcare.healthcare.utils.generate_barcodes",
-		"healthcare.healthcare.doctype.observation.observation.get_observations_for_medical_record",
+		"healthcare.doctype.diagnostic_report.diagnostic_report.diagnostic_report_print",
+		"healthcare.utils.generate_barcodes",
+		"healthcare.doctype.observation.observation.get_observations_for_medical_record",
 	]
 }
 
 # Installation
 # ------------
 
-# before_install = "healthcare.healthcare.install.before_install"
-after_install = "healthcare.healthcare.setup.setup_healthcare"
+# before_install = "healthcare.install.before_install"
+after_install = "healthcare.setup.setup_healthcare"
 
 # Uninstallation
 # ------------
 
-before_uninstall = "healthcare.healthcare.uninstall.before_uninstall"
-after_uninstall = "healthcare.healthcare.uninstall.after_uninstall"
+before_uninstall = "healthcare.uninstall.before_uninstall"
+after_uninstall = "healthcare.uninstall.after_uninstall"
 
 # Desk Notifications
 # ------------------
 # See frappe.core.notifications.get_notification_config
 
-# notification_config = "healthcare.healthcare.notifications.get_notification_config"
+# notification_config = "healthcare.notifications.get_notification_config"
 
 # Permissions
 # -----------
@@ -101,7 +101,7 @@ after_uninstall = "healthcare.healthcare.uninstall.after_uninstall"
 # Override standard doctype classes
 
 override_doctype_class = {
-	"Sales Invoice": "healthcare.healthcare.custom_doctype.sales_invoice.HealthcareSalesInvoice",
+	"Sales Invoice": "healthcare.custom_doctype.sales_invoice.HealthcareSalesInvoice",
 }
 
 # Document Events
@@ -110,18 +110,18 @@ override_doctype_class = {
 
 doc_events = {
 	"*": {
-		"on_submit": "healthcare.healthcare.doctype.patient_history_settings.patient_history_settings.create_medical_record",
-		"on_cancel": "healthcare.healthcare.doctype.patient_history_settings.patient_history_settings.delete_medical_record",
-		"on_update_after_submit": "healthcare.healthcare.doctype.patient_history_settings.patient_history_settings.update_medical_record",
+		"on_submit": "healthcare.doctype.patient_history_settings.patient_history_settings.create_medical_record",
+		"on_cancel": "healthcare.doctype.patient_history_settings.patient_history_settings.delete_medical_record",
+		"on_update_after_submit": "healthcare.doctype.patient_history_settings.patient_history_settings.update_medical_record",
 	},
 	"Sales Invoice": {
-		"on_submit": "healthcare.healthcare.utils.manage_invoice_submit_cancel",
-		"on_cancel": "healthcare.healthcare.utils.manage_invoice_submit_cancel",
-		"validate": "healthcare.healthcare.utils.manage_invoice_validate",
+		"on_submit": "healthcare.utils.manage_invoice_submit_cancel",
+		"on_cancel": "healthcare.utils.manage_invoice_submit_cancel",
+		"validate": "healthcare.utils.manage_invoice_validate",
 	},
 	"Company": {
-		"after_insert": "healthcare.healthcare.utils.create_healthcare_service_unit_tree_root",
-		"on_trash": "healthcare.healthcare.utils.company_on_trash",
+		"after_insert": "healthcare.utils.create_healthcare_service_unit_tree_root",
+		"on_trash": "healthcare.utils.company_on_trash",
 	},
 	"Patient": {
 		"after_insert": "healthcare.regional.india.abdm.utils.set_consent_attachment_details"
@@ -130,11 +130,11 @@ doc_events = {
 
 scheduler_events = {
 	"all": [
-		"healthcare.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder",
+		"healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder",
 	],
 	"daily": [
-		"healthcare.healthcare.doctype.patient_appointment.patient_appointment.update_appointment_status",
-		"healthcare.healthcare.doctype.fee_validity.fee_validity.update_validity_status",
+		"healthcare.doctype.patient_appointment.patient_appointment.update_appointment_status",
+		"healthcare.doctype.fee_validity.fee_validity.update_validity_status",
 	],
 }
 
@@ -143,32 +143,32 @@ scheduler_events = {
 
 # scheduler_events = {
 # 	"all": [
-# 		"healthcare.healthcare.tasks.all"
+# 		"healthcare.tasks.all"
 # 	],
 # 	"daily": [
-# 		"healthcare.healthcare.tasks.daily"
+# 		"healthcare.tasks.daily"
 # 	],
 # 	"hourly": [
-# 		"healthcare.healthcare.tasks.hourly"
+# 		"healthcare.tasks.hourly"
 # 	],
 # 	"weekly": [
-# 		"healthcare.healthcare.tasks.weekly"
+# 		"healthcare.tasks.weekly"
 # 	],
 # 	"monthly": [
-# 		"healthcare.healthcare.tasks.monthly"
+# 		"healthcare.tasks.monthly"
 # 	],
 # }
 
 # Testing
 # -------
 
-before_tests = "healthcare.healthcare.utils.before_tests"
+before_tests = "healthcare.utils.before_tests"
 
 # Overriding Methods
 # ------------------------------
 #
 # override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "healthcare.healthcare.event.get_events"
+# 	"frappe.desk.doctype.event.event.get_events": "healthcare.event.get_events"
 # }
 #
 # each overriding function accepts a `data` argument;
@@ -212,7 +212,7 @@ auto_cancel_exempted_doctypes = [
 # --------------------------------
 
 # auth_hooks = [
-# 	"healthcare.healthcare.auth.validate"
+# 	"healthcare.auth.validate"
 # ]
 
 global_search_doctypes = {
@@ -277,14 +277,14 @@ standard_portal_menu_items = [
 ]
 
 has_website_permission = {
-	"Lab Test": "healthcare.healthcare.web_form.lab_test.lab_test.has_website_permission",
-	"Patient Encounter": "healthcare.healthcare.web_form.prescription.prescription.has_website_permission",
-	"Patient Appointment": "healthcare.healthcare.web_form.patient_appointments.patient_appointments.has_website_permission",
-	"Patient": "healthcare.healthcare.web_form.personal_details.personal_details.has_website_permission",
+	"Lab Test": "healthcare.web_form.lab_test.lab_test.has_website_permission",
+	"Patient Encounter": "healthcare.web_form.prescription.prescription.has_website_permission",
+	"Patient Appointment": "healthcare.web_form.patient_appointments.patient_appointments.has_website_permission",
+	"Patient": "healthcare.web_form.personal_details.personal_details.has_website_permission",
 }
 
 standard_queries = {
-	"Healthcare Practitioner": "healthcare.healthcare.doctype.healthcare_practitioner.healthcare_practitioner.get_practitioner_list"
+	"Healthcare Practitioner": "healthcare.doctype.healthcare_practitioner.healthcare_practitioner.get_practitioner_list"
 }
 
 treeviews = [

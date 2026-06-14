@@ -11,13 +11,13 @@ from frappe.utils import flt, get_link_to_form, now_datetime, nowdate, nowtime
 from erpnext.stock.get_item_details import get_item_details
 from erpnext.stock.stock_ledger import get_previous_sle
 
-from healthcare.healthcare.doctype.healthcare_settings.healthcare_settings import get_account
-from healthcare.healthcare.doctype.lab_test.lab_test import create_sample_doc
-from healthcare.healthcare.doctype.nursing_task.nursing_task import NursingTask
-from healthcare.healthcare.doctype.service_request.service_request import (
+from healthcare.doctype.healthcare_settings.healthcare_settings import get_account
+from healthcare.doctype.lab_test.lab_test import create_sample_doc
+from healthcare.doctype.nursing_task.nursing_task import NursingTask
+from healthcare.doctype.service_request.service_request import (
 	update_service_request_status,
 )
-from healthcare.healthcare.utils import validate_nursing_tasks
+from healthcare.utils import validate_nursing_tasks
 
 
 class ClinicalProcedure(Document):

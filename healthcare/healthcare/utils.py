@@ -14,12 +14,12 @@ from frappe.utils.formatters import format_value
 
 from erpnext.setup.utils import insert_record
 
-from healthcare.healthcare.doctype.healthcare_settings.healthcare_settings import (
+from healthcare.doctype.healthcare_settings.healthcare_settings import (
 	get_income_account,
 )
-from healthcare.healthcare.doctype.lab_test.lab_test import create_multiple
-from healthcare.healthcare.doctype.observation.observation import add_observation
-from healthcare.healthcare.doctype.observation_template.observation_template import (
+from healthcare.doctype.lab_test.lab_test import create_multiple
+from healthcare.doctype.observation.observation import add_observation
+from healthcare.doctype.observation_template.observation_template import (
 	get_observation_template_details,
 )
 from healthcare.setup import setup_healthcare
@@ -451,7 +451,7 @@ def get_appointment_billing_item_and_rate(doc):
 
 
 def get_appointment_type_billing_details(appointment_type, dep_su, is_inpatient):
-	from healthcare.healthcare.doctype.appointment_type.appointment_type import get_billing_details
+	from healthcare.doctype.appointment_type.appointment_type import get_billing_details
 
 	if not dep_su:
 		return None, None

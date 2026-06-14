@@ -7,10 +7,10 @@ import frappe
 
 from erpnext.stock.doctype.item.test_item import create_item
 
-from healthcare.healthcare.doctype.patient_appointment.test_patient_appointment import (
+from healthcare.doctype.patient_appointment.test_patient_appointment import (
 	create_healthcare_docs,
 )
-from healthcare.healthcare.doctype.service_request.test_service_request import (
+from healthcare.doctype.service_request.test_service_request import (
 	create_encounter,
 	create_sales_invoice,
 )

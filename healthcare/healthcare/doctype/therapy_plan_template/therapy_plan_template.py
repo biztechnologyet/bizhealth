@@ -7,7 +7,7 @@ import frappe
 from frappe.model.document import Document
 from frappe.utils import cint, flt
 
-from healthcare.healthcare.doctype.therapy_type.therapy_type import make_item_price
+from healthcare.doctype.therapy_type.therapy_type import make_item_price
 
 
 class TherapyPlanTemplate(Document):

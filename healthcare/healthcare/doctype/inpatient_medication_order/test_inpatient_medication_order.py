@@ -7,12 +7,12 @@ import frappe
 from frappe.tests.utils import FrappeTestCase
 from frappe.utils import add_days, getdate, now_datetime
 
-from healthcare.healthcare.doctype.inpatient_record.inpatient_record import (
+from healthcare.doctype.inpatient_record.inpatient_record import (
 	admit_patient,
 	discharge_patient,
 	schedule_discharge,
 )
-from healthcare.healthcare.doctype.inpatient_record.test_inpatient_record import (
+from healthcare.doctype.inpatient_record.test_inpatient_record import (
 	create_inpatient,
 	create_patient,
 	get_healthcare_service_unit,

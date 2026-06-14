@@ -6,16 +6,16 @@ from frappe.custom.doctype.custom_field.custom_field import create_custom_fields
 from frappe.tests.utils import FrappeTestCase
 from frappe.utils import flt, getdate, nowtime
 
-from healthcare.healthcare.doctype.healthcare_settings.healthcare_settings import (
+from healthcare.doctype.healthcare_settings.healthcare_settings import (
 	get_income_account,
 	get_receivable_account,
 )
-from healthcare.healthcare.doctype.lab_test.test_lab_test import create_practitioner
-from healthcare.healthcare.doctype.observation_template.test_observation_template import (
+from healthcare.doctype.lab_test.test_lab_test import create_practitioner
+from healthcare.doctype.observation_template.test_observation_template import (
 	create_grouped_observation_template,
 	create_observation_template,
 )
-from healthcare.healthcare.doctype.patient_appointment.test_patient_appointment import (
+from healthcare.doctype.patient_appointment.test_patient_appointment import (
 	create_patient,
 )
 

@@ -8,8 +8,8 @@ from frappe import _
 from frappe.model.document import Document
 from frappe.utils import get_link_to_form, getdate, now_datetime
 
-from healthcare.healthcare.doctype.nursing_task.nursing_task import NursingTask
-from healthcare.healthcare.doctype.service_request.service_request import (
+from healthcare.doctype.nursing_task.nursing_task import NursingTask
+from healthcare.doctype.service_request.service_request import (
 	update_service_request_status,
 )
 
@@ -20,7 +20,7 @@ class LabTest(Document):
 			self.set_secondary_uom_result()
 
 	def on_submit(self):
-		from healthcare.healthcare.utils import validate_nursing_tasks
+		from healthcare.utils import validate_nursing_tasks
 
 		validate_nursing_tasks(self)
 		self.validate_result_values()

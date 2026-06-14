@@ -5,7 +5,7 @@ import frappe
 from frappe.model.document import Document
 from frappe.model.workflow import get_workflow_name, get_workflow_state_field
 
-from healthcare.healthcare.doctype.observation.observation import get_observation_details
+from healthcare.doctype.observation.observation import get_observation_details
 
 
 class DiagnosticReport(Document):

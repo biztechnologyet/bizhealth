@@ -18,7 +18,7 @@ from erpnext import get_default_currency
 from erpnext.accounts.party import get_dashboard_info
 from erpnext.selling.doctype.customer.customer import make_address
 
-from healthcare.healthcare.doctype.healthcare_settings.healthcare_settings import (
+from healthcare.doctype.healthcare_settings.healthcare_settings import (
 	get_income_account,
 	get_receivable_account,
 	send_registration_sms,

@@ -11,7 +11,7 @@ from frappe.model.document import Document
 from frappe.model.mapper import get_mapped_doc
 from frappe.utils import add_days, getdate
 
-from healthcare.healthcare.utils import get_medical_codes
+from healthcare.utils import get_medical_codes
 
 
 class PatientEncounter(Document):

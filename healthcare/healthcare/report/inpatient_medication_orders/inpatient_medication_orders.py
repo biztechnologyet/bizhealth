@@ -4,7 +4,7 @@
 
 import frappe
 
-from healthcare.healthcare.doctype.inpatient_medication_entry.inpatient_medication_entry import (
+from healthcare.doctype.inpatient_medication_entry.inpatient_medication_entry import (
 	get_current_healthcare_service_unit,
 )
 

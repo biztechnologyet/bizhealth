@@ -6,7 +6,7 @@
 import frappe
 from frappe.tests.utils import FrappeTestCase
 
-from healthcare.healthcare.doctype.patient_encounter.patient_encounter import PatientEncounter
+from healthcare.doctype.patient_encounter.patient_encounter import PatientEncounter
 
 
 class TestPatientEncounter(FrappeTestCase):

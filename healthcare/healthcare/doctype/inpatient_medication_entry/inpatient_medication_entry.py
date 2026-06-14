@@ -11,7 +11,7 @@ from frappe.utils import flt, get_link_to_form, get_time, getdate
 
 from erpnext.stock.utils import get_latest_stock_qty
 
-from healthcare.healthcare.doctype.healthcare_settings.healthcare_settings import get_account
+from healthcare.doctype.healthcare_settings.healthcare_settings import get_account
 
 
 class InpatientMedicationEntry(Document):

@@ -8,7 +8,7 @@ from frappe import _
 from frappe.model.document import Document
 from frappe.utils import cstr
 
-from healthcare.healthcare.doctype.patient_encounter.patient_encounter import (
+from healthcare.doctype.patient_encounter.patient_encounter import (
 	get_prescription_dates,
 )
 

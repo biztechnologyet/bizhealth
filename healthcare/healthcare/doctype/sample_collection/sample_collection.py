@@ -9,8 +9,8 @@ import frappe
 from frappe.model.document import Document
 from frappe.utils import now_datetime
 
-from healthcare.healthcare.doctype.observation.observation import add_observation
-from healthcare.healthcare.doctype.observation_template.observation_template import (
+from healthcare.doctype.observation.observation import add_observation
+from healthcare.doctype.observation_template.observation_template import (
 	get_observation_template_details,
 )
 
@@ -76,7 +76,7 @@ class SampleCollection(Document):
 @frappe.whitelist()
 def create_observation(selected, sample_collection, component_observations=None, child_name=None):
 	frappe.enqueue(
-		"healthcare.healthcare.doctype.sample_collection.sample_collection.insert_observation",
+		"healthcare.doctype.sample_collection.sample_collection.insert_observation",
 		selected=selected,
 		sample_collection=sample_collection,
 		component_observations=component_observations,

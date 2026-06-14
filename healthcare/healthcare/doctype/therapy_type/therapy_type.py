@@ -11,7 +11,7 @@ from frappe.model.document import Document
 from frappe.model.rename_doc import rename_doc
 from frappe.utils import cint
 
-from healthcare.healthcare.doctype.clinical_procedure_template.clinical_procedure_template import (
+from healthcare.doctype.clinical_procedure_template.clinical_procedure_template import (
 	make_item_price,
 )
 

@@ -13,8 +13,8 @@ from frappe import _
 from frappe.model.mapper import get_mapped_doc
 
 from healthcare.controllers.service_request_controller import ServiceRequestController
-from healthcare.healthcare.doctype.observation.observation import add_observation
-from healthcare.healthcare.doctype.observation_template.observation_template import (
+from healthcare.doctype.observation.observation import add_observation
+from healthcare.doctype.observation_template.observation_template import (
 	get_observation_template_details,
 )
 
